@@ -11,13 +11,18 @@
 <body>
     <canvas width="500" height="500" id="canvas"></canvas>
     <script>
-        var data = [11, 16, 68, 20, 30, 54, 85];
+        var data = [11, 30, 68, 20, 16, 554, 85];
 
         var canvas = document.querySelector('#canvas');
         var c = canvas.getContext('2d');
 
         c.fillStyle = 'gray';
-        c.fillRect(0,0,500,500);
+        c.fillRect(0, 0, 500, 500);
+        c.fillStyle = "blue"; 
+        for(var i=0; i<data.length; i++) { 
+            var dp = data[i]; 
+            c.fillRect(25 + i*100, 500-dp*5 - 30, 50, dp*5); 
+        }
     </script>
 </body>
 </html>
